@@ -1,1 +1,8 @@
+from winreg import *
+
+def get_download_dir():
+    with OpenKey(HKEY_CURRENT_USER, 'SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders') as key:
+        dir = QueryValueEx(key, '{374DE290-123F-4565-9164-39C4925E467B}')[0]
+    return dir
+
 
