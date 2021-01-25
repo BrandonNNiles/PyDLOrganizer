@@ -1,4 +1,4 @@
-from functions import get_download_dir
+from functions import *
 from heleprs import *
 import time
 
